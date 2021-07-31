@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srivarshan's Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/mainstyles.css' %}">
+    
+
+    <script src="https://use.fontawesome.com/6cdad4452c.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+</head>
+<body style="background-image:url('static/images/page-bg.jpg')">
+
+    <!-- preloader -->
+    <!-- <div class="spinner-wrapper">
+        <div class="spinner"></div>
+    </div> -->
+    <!-- navbar -->
+
+    <div class="hamburger">
+        <i class="fa fa-bars" ></i>
+    </div>
+    <div class="navbar outer-border" id="navbar">
+        <div class="inner-border">
+            <div class="content">
+                <div class="navitems">
+
+                    <div class="close">
+                        <i class="fa fa-times"></i>
+                    </div>
+
+                    <div class="navitems-1">
+                        <div class="div-author-img">
+                            <img class="author-img" src="{% static 'images/myself.jpg' %}" alt="author-img" >
+                        </div>
+                        <div class="author-details">
+                            <p class="author-name">Srivarshan</p>
+                            <p class="author-job"><i>Web Developer</i></p>
+                        </div>
+                    </div>
+                   
+                    <a class="navitems-list " href="#aboutme1">
+                        <div  class="navitems-div aboutme1   navitems-2 ">
+                            About Me
+                        </div>
+                    </a>
+                   
+                    <a class="navitems-list " href="#goodat1">
+                         <div  class="navitems-div  goodat1 navitems-3 ">
+                            What I'm good at
+                        </div>
+                    </a>
+                   
+                    <a class="navitems-list " href="#mywork1">
+                         <div  class="navitems-div mywork1  navitems-4 ">
+                            My Work
+                        </div>
+                    </a>
+                   
+                    <a class="navitems-list " href="#contactme1">
+                         <div  class="navitems-div  contactme1 navitems-5 ">
+                            Contact Me
+                        </div>
+                    </a>
+
+                    <div class="socialmedia-icons">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/mr._.moderator/" target="blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://github.com/srivarshan12/webdev" target="blank"><i class="fa fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sri-varshan-2a33751b5/" target="blank"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- body -->
+
+    <div class="info">
+        <!-- ********************************aboutme******************************* -->
+
+        <section id="aboutme1" class="aboutme onepagenav">
+            <article class="aboutme-1">
+                <h1>About Me</h1>
+                <p>My name is Srivarshan and I am Web Developer. I have been working on many small projects and  have a strong passion in pencil sketching.  </p>
+            </article>
+            <article class="aboutme-2">
+                <div class="aboutme-2-img">
+                        <img src="{% static 'images/right-image.jpg' %}" alt="right-image" class="image-right">
+                </div>
+                <div class="aboutme-2-data">
+                    <p>Donec tristique feugiat lacus, at sollicitudin nunc euismod sed. Mauris viverra, erat non sagittis gravida, elit dui mollis ante, sit amet eleifend purus ligula eget eros. Sed tincidunt quam vitae neque pharetra dignissim eget ut libero.</p>
+                    <button id="resume">Resume</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- ********************************what im good at**************************************** -->
+        <section id="goodat1" class="goodat onepagenav">
+            <article class="goodat-1">
+                <h1>What I'm good at?</h1>
+                <p>Curabitur leo felis, rutrum vitae varius eu, malesuada a tortor. Vestibulum congue leo et tellus aliquam, eu viverra nulla semper. Nullam eu faucibus diam. Donec eget massa ante.</p>
+            </article>
+            <article class="goodat-2">
+                <div class="box "id="htmlandcss3">
+                    <h1>HTML5 &amp CSS3</h1>
+                    <p>Phasellus non convallis dolor. Integer tempor hendrerit arcu at bibendum. Sed ac ante non metus vehicula congue quis eget eros.</p>
+                </div>
+
+                <div class="box "id="javascript">
+                    <h1>Javascript</h1>
+                    <p>Phasellus non convallis dolor. Integer tempor hendrerit arcu at bibendum. Sed ac ante non metus vehicula congue quis eget eros.</p>
+                </div>
+
+                <div class="box "id="responsivedesign">
+                    <h1>Responsive design</h1>
+                    <p>Phasellus non convallis dolor. Integer tempor hendrerit arcu at bibendum. Sed ac ante non metus vehicula congue quis eget eros.</p>
+                </div>
+
+                <div class="box " id="django">
+                    <h1>Django</h1>
+                    <p>Phasellus non convallis dolor. Integer tempor hendrerit arcu at bibendum. Sed ac ante non metus vehicula congue quis eget eros.</p>
+                </div>
+
+
+            </article>
+        </section>
+
+        <!-- ***********************************mywork******************************************** -->
+        <section id="mywork1" class="mywork onepagenav">
+            <article class="mywork-1">
+                <h1>My Work</h1>
+                <p>Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit amet. Duis ac elit vulputate, lobortis arcu quis, vehicula mauris.</p>
+            </article>
+            <article class="mywork-2">
+                <div class="links">
+                    <li class="individuallinks active" data-filter="all">All</li>
+                    <li class="individuallinks" data-filter="htmlandcss3">HTML &amp CSS3</li>
+                    <li class="individuallinks" data-filter="javascript">Javascript</li>
+                    <li class="individuallinks" data-filter="django">Django</li>
+                </div>
+                <div class="images">
+                    {% for item in project %}
+                    <div class="card itembox {{ item.categoryone }}   {{ item.categorytwo }}  {{item.categorythree}}  ">
+                        
+                        <img src="{{item.image.url}} " class="mywork-images" alt="">
+                        <div class="cardcontent">
+                            <div class="cardfront">
+                                <h3 class="cardtitle">{{item.name}}</h3>
+                                <p class="cardsubtitle"><a class="cardsubtitle-a" href="{{item.url}}" target="_blank">View project</a></p>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </article>
+        </section>
+        <!-- ****************************contactme******************************* -->
+
+        <section id="contactme1" class="contactme onepagenav">
+            <article class="contactme-1">
+                <h1>Contact Me </h1>
+                <p>Fusce eget nibh nec justo interdum condimentum. Morbi justo ex, efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="contactme-2">
+                <div class="form-class">
+                    <form  method="POST">
+                        {% csrf_token %}
+                        <div class="input-row-1">
+                            <input class="name "  required="" type="text" name="sendername" placeholder="Your name...">
+                            <input class="email" required="" type="email" name="senderemail" placeholder="Your email">
+                        </div>
+                        
+                        <div class="input-row-3">    
+                            <input class="subject" required="" type="text" name="sendersubject" placeholder="Subject..">
+                        </div>
+                        <div class="input-row-4">
+                            <textarea  rows ="10" required=""  resize="" class="message" type="textarea" name="sendermessage" placeholder="Your Message.."></textarea>
+                        </div>
+                        <div class="button-class">
+                            <button id="sendmessage" type="submit" value="SEND MESSAGE">Send message</button>
+                        </div>
+                    </form>
+                 </div>
+            </article>
+        </section>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
