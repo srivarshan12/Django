@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{%block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>
+{% endblock %}
+
+{% block h3tag %}
+    contact
+{% endblock %}
+{%block activecontact%}  activenavbar {% endblock %}
+{%block content%}
+
+
+<div class="artist-info">
+    <div class="divmap">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.204969065524!2d78.1224361150546!3d9.916880326067995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c59ce986b545%3A0x886b5976f0b45ba0!2s61%2C%20Mahal%20Vadampokki%20St%2C%20Mahal%20Area%2C%20Madurai%20Main%2C%20Madurai%2C%20Tamil%20Nadu%20625001!5e0!3m2!1sen!2sin!4v1629563769159!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" ></iframe>
+        </div>
+    </div>
+
+
+        <section class="info">
+                <h2>ARTIST INFO</h2>
+                <ul >
+                    <li class="artist-list"><i class="fas fa-map-marker-alt"></i> Address: Vilakuthoon, Madurai</li>
+                    <li class="artist-list"><i class="fas fa-mobile-alt"></i> Phone: 6382821383</li>
+                    <li class="artist-list"><i class="far fa-envelope"></i> Email: <a href="mailto:varshan1206@gmail.com">varshan1206@gmail.com</a> </li>
+                    <li class="artist-list"><i class="fas fa-globe-asia"></i> Web: <a href="//srivarshan13.pythonanywhere.com">srivarshan13.pythonanywhere.com</a></li>
+                    
+                    
+                        <div class="socialmedia">
+                            <ul>
+                                <li class="twitter" ><i class=" fab fa-twitter"></i></li>
+                                <li class="facebook"><i class=" fab fa-facebook-f"></i></li>
+                                <li class="google-plus"><i class=" fab fa-google-plus-g"></i></li>
+
+                                <li class="dribble"><i class="fab fa-dribbble"></i></li>
+                                <li class="pinterest"><i class=" fab fa-pinterest"></i></li>
+
+                                <li class="linkedin"><i class="fab fa-linkedin-in"></i></li>
+                                <li class="flicker"><i class="fab fa-flickr"></i></li>
+
+                                <li class="tumblr "><i class="fab fa-tumblr"></i></li>
+                            </ul>
+                        </div>
+                </ul> 
+        </section>
+</div>
+
+<div id="redirectmsg-id" class="redirectmsg displaynone">
+    <h2 class="redirectname">Thanks </h2>
+    <p>
+        We recieved your mail and will respond shortly...
+    </p>
+    
+</div>
+<div class="contactform">
+    <div class="getintouch">
+       
+        <div class="formdiv">
+            
+                <h2>GET IN TOUCH</h2>
+                
+                <form method="POST" id="contact-form">
+                
+                    {% csrf_token %}
+                    <div class="grid-forms">
+                        <input required="" autocomplete="off" class="ipfield" id="name" type="text" name="name"placeholder="Name">
+                        <input required="" autocomplete="off" class="ipfield" id="email"type="Email" name="email" placeholder="Email">
+                        <input required="" autocomplete="off" class="ipfield" id="subject"type="text" name="subject" placeholder="subject">
+                        <textarea class="ipfield1" rows="5"  id="message"name="message" placeholder="Message" required=""></textarea>
+                    </div>
+                    
+                    <button class="submitbtn" id="contactform-submit-btn" type="submit">SEND</button>
+                    {{message}}
+                </form>
+                
+        </div>
+    </div>
+    
+    <div class="newsletter">
+        <h2>NEWSLETTER</h2>
+        <div class="newsletter-row1">
+            <form method="POST" id="contactpage-newsletter-form">
+                {% csrf_token %}
+                <input required="" class="ipfield2" type="email" id="newsletteremail" name="task" placeholder="Email">
+                <button class="submitbtn" type="submit">Subscribe</button>
+            </form>
+        </div>
+        
+        <div class="newsletter-row2">
+            <div class="subsmsg">
+                <i class="  fa fa-check" ></i>
+            </div>
+            <div class="subsdesc env-icon">
+                <i class="  far fa-envelope"></i>
+            </div>
+            <p class="subsdesc">Feel free to place your Mail_ID and Subscribe to our Newsletter here. So that, you can receive our exiting Updates and Offers with no wait!</p>
+            <h3 class="subsmsg">Thanks for Subscribing!</h3>    
+
+        </div>
+    </div>
+    
+</div>
+
+<!-- <script> -->
+    <!-- console.log("submit btn ajax");
+    $.ajax({
+        type:'POST',
+        //url:"{% static 'js/ajax1.js' %}",
+        data:
+        {
+            name:$("#name").val(),
+            subject:$("#subject").val(),
+            email:$("#email").val(),
+            message:$("#message").val(),
+        },
+        
+        success:function(result){
+            if(result==true){
+                $("contactform-submit-btn").text("sending")
+            }
+        }
+            
+}) -->
+<!-- </script> -->
+
+{% endblock %}

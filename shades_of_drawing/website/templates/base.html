@@ -1,0 +1,145 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>
+        {% block title %} 
+        
+        {%endblock%}
+    </title>
+
+    {% block stylesheet %}{% endblock %}
+    
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{%static 'plugins/josefin-sans.css' %}">
+    <link rel="stylesheet" href="{%static 'plugins/pt-sans-narrow.css'%}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="{%static 'plugins/jquery.js' %}"></script>
+    <script src="{%static 'js/base.js' %}"></script>
+    
+</head>
+<body>
+    <div class="spinner-wrapper">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="sticky">
+        <div class="container">
+            <div class="navbar">
+                <div class="side default-side"><i class=" menu fas fa-bars"></i></div>
+                <div class="side hover-side" id="hover-side-id">
+                       
+                        <div class="div-icon i1 " >
+
+                            <a class="items " id="home" href="{% url 'index' %}">
+                                <p class="left-bracket">[</p>
+                                    home 
+                                <p class="right-bracket">]</p>
+
+                                <i class="nav-icon fas fa-home"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="div-icon i2 {%block activeaboutme%}   {% endblock %}" >
+                            <a class="items " id="aboutme" href="{% url 'aboutus' %}">
+                                <p class="left-bracket">[</p>
+                                about me 
+                                <p class="right-bracket">]</p>
+
+                            <i class="nav-icon fas fa-user-secret"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="div-icon {%block activegallery%}   {% endblock %} i3" >
+                            <a class="items " id="gallery" href="{% url 'gallery' %}">
+                                <p class="left-bracket">[</p>
+                                gallery
+                                <p class="right-bracket">]</p>
+
+                            <i class="nav-icon fas fa-camera-retro"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="div-icon {%block activeservice%}   {% endblock %} i4" >
+                            <a class="items " id="service" href="{% url 'service' %}">
+                                <p class="left-bracket">[</p>
+                                service
+                                <p class="right-bracket">]</p>
+
+                            <i class="nav-icon fas fa-handshake"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="div-icon {%block activeshop%}   {% endblock %} i5" >
+                            <a class="items " id="shop" href="{% url 'shop' %}">
+                                <p class="left-bracket">[</p> 
+                                shop 
+                                <p class="right-bracket">]</p>
+
+                            <i class="nav-icon fas fa-cart-plus"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="div-icon {%block activecontact%}   {% endblock %}" >
+                            <a class="items i5" id="contact" href="{% url 'contact' %}">
+                                <p class="left-bracket">[</p>
+                                contact 
+                                <p class="right-bracket">]</p>
+
+                                <i class="nav-icon fas fa-map-marker-alt"></i>
+                            </a>
+                        </div>
+                </div>
+            </div>
+            <div class=" close-side">
+                <a id="sod" href="{% url 'index' %}"> <p id="red">Shades</p> of drawing</p></a>
+                <div class="close-box">
+                    <i id="closeid" class=" close fas fa-times"></i>
+                    <i id="menuid" class=" menu fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="top">
+        <div class="title">
+            <h3 id="title">{%block h3tag %}{%endblock%}</h3>
+            <!-- <p class="small-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit Ratione </p> -->
+            <img class="title-line" src="{%static 'img/others/title-line.png'  %}" alt="title-line">
+        </div>        
+    </header>
+
+    {% block content %}
+
+
+
+    {% endblock %}    
+    
+    <div class="line">
+    </div>
+    <footer class="footer">
+        <ul class="additional">
+            <a href="{%url 'contact'  %}"><li>Contact us</li></a>
+            <li>Privacy policy</li>
+            <li>Terms of use</li>
+            <li>FAQ</li>
+             
+        </ul>
+        
+        <ul class="payment-icons">
+            <li><i class="fab fa-cc-amex"></i></li>
+            <li><i class="fab fa-cc-mastercard"></i></li>
+            <li><i class="fab fa-cc-visa"></i></li>
+            <li><i class="fab fa-cc-discover"></i></li>
+            <li><i class="fab fa-cc-paypal"></i></li>
+    
+        </ul>
+        <!-- <p>  © 2021 <a href="{% url 'index' %}">Shades of Drawing</a>. All rights reserved</p> -->
+    </footer>
+    
+</body>
+</html>

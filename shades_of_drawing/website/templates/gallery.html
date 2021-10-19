@@ -1,0 +1,139 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+    {% block title %}
+        Gallery
+    {% endblock %}
+
+    {%block stylesheet %}
+        <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+        <script src="{%static 'plugins/isotope.pkgd.js' %}"></script>
+        <script src="{%static 'plugins/jquery.js' %}"></script>
+
+    {% endblock %}
+
+    {% block h3tag %}
+        gallery
+    {% endblock %}
+
+<!-- preloader -->
+{%block activegallery%} activenavbar  {% endblock %}
+
+{%block content%}
+    <div class="spinner-wrapper">
+        <div class="spinner"></div>
+    </div>
+            
+    <div class="filter-button">
+        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button active" data-filter="*">
+            <span class="tooltiptext" id="allitems"></span>
+            ALL
+        </button>
+    
+        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".potrait">
+            <span class="tooltiptext" id="potrait"></span>
+            POTRAITS
+        </button>
+    
+        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".realistic">
+            <span class="tooltiptext" id="realistic"></span>
+            REALISTIC
+        </button>
+    
+        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".perspective">
+            <span class="tooltiptext" id="perspective"></span>
+            PERSPECTIVE
+        </button>
+    
+        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".threed">
+            <span class="tooltiptext" id="threed"></span>
+            3D
+        </button>
+    
+    </div>
+    
+    <div class="middle grid" >
+
+        <div class=" grid-item threed ">
+            <img class=" drawing-img initial" id="initial" src="{% static 'img/mydrawing/3D/underground building 1.jpeg' %}" alt="underground-building"> 
+        </div>
+
+        <div class="grid-item realistic potrait">            
+            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/realistic/realistic1.jpg' %}" alt="realistic"> 
+        </div> 
+                
+        <div class=" grid-item perspective threed">
+            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/perspective/bird eye perspective.jpeg' %}" alt="birds-eye-perspective"> 
+        </div> 
+
+        <div class="grid-item potrait ">   
+            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/marvel/ironman-1.jpeg' %}" alt="ironman"> 
+        </div>
+
+
+        <div class="grid-item potrait ">
+            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/marvel/doctor strange.jpg' %}" alt="doctor-strange">
+        </div>
+
+        <div class="grid-item potrait realistic">
+            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/nadal/nadal.jpg' %}" alt="nadal"> 
+        </div>
+
+        <div class="grid-item perspective">
+            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/perspective/guggehium.jpeg' %}" alt="guggenhium"> 
+        </div>      
+
+        <div class="grid-item threed  " >
+            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/3D/underground-city1.jpeg' %}" alt="underground-city"> 
+        </div> 
+
+
+        <div class="grid-item potrait ">       
+            <img class=" drawing-img " src="{% static 'img/mydrawing/harry-potter/lord voldemort.jpeg' %}" alt="voldermort" > 
+        </div>
+
+        <div class=" grid-item potrait">
+            <img class=" drawing-img " src="{% static 'img/mydrawing/marvel/captain-america.jpeg' %}" alt="captain-america"> 
+        </div>        
+
+        <div class="grid-item potrait " >
+            <img class=" drawing-img " src="{% static 'img/mydrawing/harry-potter/harry potter.jpeg' %}" alt="harry-potter">
+        </div>
+
+        <div class="grid-item potrait "> 
+            <img class=" drawing-img " src="{% static 'img/mydrawing/marvel/deadpool.jpeg' %}" alt="deadpool"> 
+        </div>
+
+        <div class="grid-item potrait">
+            <img class=" drawing-img " src="{% static 'img/mydrawing/marvel/starlord-1.jpeg' %}" alt="starlord"> 
+        </div>
+
+        <div class=" grid-item threed">    
+            <img class=" drawing-img " src="{% static 'img/mydrawing/3D/burj khalifa 1.jpeg' %}" alt="burj-khalifa">
+        </div>
+
+        <div class=" grid-item potrait">
+            <img class=" drawing-img " src="{% static 'img/mydrawing/marvel/vision.jpeg' %}" alt="vision">
+        </div>
+
+        <div class=" grid-item perspective ">
+            <img class=" drawing-img " src="{% static 'img/mydrawing/perspective/sci-fi city.jpeg' %}" alt="sci-fi-city">
+        </div>
+
+        <div class="grid-item potrait  " >
+            <img class=" drawing-img " src="{% static 'img/mydrawing/marvel/mandalorian.jpeg' %}" alt="mandalorian"> 
+        </div> 
+            
+
+    </div>
+        
+        <div class="loadmore">
+            
+            <button class="loadbutton  ">Load more                <span class="gallery-icon"><i class="far fa-image"></i></span>
+            </button>
+
+        </div>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script src="{%static 'js/gallery.js' %}"></script>
+        
+{% endblock %}

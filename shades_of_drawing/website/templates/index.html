@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>
+        Shades of Drawing
+    </title>
+    
+    <link rel="stylesheet" href="{%static 'plugins/josefin-sans.css' %}">
+    <link rel="stylesheet" href="{%static 'plugins/pt-sans-narrow.css'%}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{%static 'css/index.css' %}">
+    <script src="{%static 'plugins/jquery.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="{% static 'js/ajax.js' %}"></script>
+    <script src="{%static 'js/index.js' %}"></script>
+    
+</head>
+<body>
+
+    <div class="spinner-wrapper">
+        <div class="spinner"></div>
+    </div>
+
+    
+
+
+    <nav class="sticky">
+        <div class="container">
+            <div class="navbar">
+                <div class="side default-side"><i class=" menu fas fa-bars"></i></div>
+                    <div class="side hover-side" id="hover-side-id">                        
+            
+                        <div class="div-icon i1 activenavbar" >
+                            <a class="items " id="home" href="{% url 'index' %}">
+                                <p class="left-bracket">[</p>
+                                    home 
+                                <p class="right-bracket">]</p>
+
+                                <i class="nav-icon fas fa-home"></i>
+                            </a>
+                        </div>
+            
+                        <div class="div-icon i2" >
+                            <a class="items " id="aboutme" href="{% url 'aboutus' %}">
+                                <p class="left-bracket">[</p>
+                                about me 
+                                <p class="right-bracket">]</p>
+
+                            <i class="nav-icon fas fa-user-secret"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="div-icon i3" >
+                            <a class="items " id="gallery" href="{% url 'gallery' %}">
+                                <p class="left-bracket">[</p>
+                                gallery
+                                <p class="right-bracket">]</p>
+
+                            <i class="nav-icon fas fa-camera-retro"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="div-icon i4" >
+                            <a class="items " id="service" href="{% url 'service' %}">
+                                <p class="left-bracket">[</p>
+                                service
+                                <p class="right-bracket">]</p>
+
+                            <i class="nav-icon fas fa-handshake"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="div-icon i5" >
+                            <a class="items " id="shop" href="{% url 'shop' %}">
+                                <p class="left-bracket">[</p>
+                                shop 
+                                <p class="right-bracket">]</p>
+
+                            <i class="nav-icon fas fa-cart-plus"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="div-icon" >
+                            <a class="items i5" id="contact" href="{% url 'contact' %}">
+                                <p class="left-bracket">[</p>
+                                contact 
+                                <p class="right-bracket">]</p>
+
+                                <i class="nav-icon fas fa-map-marker-alt"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class=" close-side">
+                    <!-- <div class="content"> -->
+                        <a id="sod" href="{% url 'index' %}"> <p id="red">Shades</p> of drawing</p></a>
+
+                        <div class="close-box">
+                            <i id="closeid" class=" close fas fa-times"></i>
+                            <i id="menuid" class=" menu fas fa-bars"></i>
+                        </div>
+                    <!-- </div> -->
+                </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jumbotron">
+</div>
+
+<div class="top" id="top">
+    <div class="title">
+        <h3 id="title">Portfolio</h3>
+        <p class="small-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit Ratione </p>
+        <img class="title-line" src="{%static 'img/others/title-line.png'  %}" alt="title-line">
+    </div>        
+</div>
+
+
+        
+<div class="filter-button">
+    <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button active" data-filter="*">
+        <span class="tooltiptext" id="allitems"></span>
+        ALL
+    </button>
+
+    <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".potrait">
+        <span class="tooltiptext" id="potrait"></span>
+        POTRAITS
+    </button>
+
+    <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".realistic">
+        <span class="tooltiptext" id="realistic"></span>
+        REALISTIC
+    </button>
+
+    <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".perspective">
+        <span class="tooltiptext" id="perspective"></span>
+        PERSPECTIVE
+    </button>
+
+    <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".threed">
+        <span class="tooltiptext" id="threed"></span>
+        3D
+    </button>
+
+</div>
+
+<div class="middle grid" >
+
+    <div class=" grid-item perspective threed ">
+        <img class=" drawing-img initial" id="initial"src="{% static 'img/mydrawing/3D/burj khalifa 1.jpeg' %}" alt="burj-khalifa"> 
+    </div>
+
+    <div class="grid-item realistic potrait">            
+        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/realistic/realistic1.jpg' %}" alt="realistic"> 
+    </div> 
+            
+    <div class=" grid-item perspective threed">
+        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/perspective/bird eye perspective.jpeg' %}" alt="birds-eye-perspective"> 
+    </div> 
+
+    <div class="grid-item potrait ">   
+        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/marvel/ironman-1.jpeg' %}" alt="ironman"> 
+    </div>
+
+
+    <div class="grid-item potrait ">
+        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/marvel/doctor strange.jpg' %}" alt="doctor-strange">
+    </div>
+
+    <div class="grid-item potrait realistic">
+        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/nadal/nadal.jpg' %}" alt="nadal"> 
+    </div>
+
+    <!-- <div class="grid-item perspective">
+        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/perspective/guggehium.jpeg' %}" alt="guggenhium"> 
+    </div>       -->
+
+    <div class="grid-item threed  " >
+        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/3D/underground-city1.jpeg' %}" alt="underground-city"> 
+    </div> 
+    
+    <div class="grid-item potrait  " >
+        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/marvel/mandalorian.jpeg' %}" alt="mandalorian"> 
+    </div> 
+
+</div>
+
+
+<div class="top">
+    <div class="title">
+        <h3 id="title">Blog</h3>
+        <p class="small-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit Ratione </p>
+        <img class="title-line" src="{%static 'img/others/title-line.png'  %}" alt="title-line">
+    </div>        
+</div>
+
+
+<div class="blog-box">
+    <div class="flexbox first-row">
+        <div class="img-box">
+            <div class="blog-img img1">
+                <img src="{%static 'img/others/first-tblog-img3.jpg'%}" alt="first-tblog-img3.jpg">
+
+            </div> 
+            
+            <div class="blog-img img2">
+                <img src="{%static 'img/others/first-tblog-img2.jpg'%}" alt="first-tblog-img2.jpg">
+            </div> 
+            
+            <div class="blog-img img3">
+                <img src="{%static 'img/others/first-tblog-img1.jpg'%}" alt="first-tblog-img1.jpg">
+
+            </div> 
+        </div>
+        
+        <div class="text-box">
+            <h3>acrylic</h3>
+            <p><b>Acrylic painting</b>, technique in which pigments are mixed with hot, liquid wax. After all of the colours have been applied to the painting surface, a heating element is passed over them until the individual brush or spatula marks fuse into a uniform film.</p>
+            <a href="{% url 'gallery' %}"><button class="view-gallery-btn ">view gallery
+                <span class="brush-icon"><i class="fa fa-bullhorn"></i></span>
+            </button></a>
+        </div>
+    </div>
+    
+    <div class="flexbox first-row">
+        
+        
+        <div class="text-box">
+            <h3>ENCAUSTIC</h3>
+            <p><b>Encaustic painting</b>, technique in which pigments are mixed with hot, liquid wax. After all of the colours have been applied to the painting surface, a heating element is passed over them until the individual brush or spatula marks fuse into a uniform film.</p>
+            <a href="{% url 'gallery' %}">
+                <button class="view-gallery-btn ">view gallery
+                    <span class="brush-icon"><i class="fa fa-bullhorn"></i></span>
+                </button>
+            </a>
+        </div>
+        <div class="img-box">
+            <div class="blog-img img1">
+                <img src="{%static 'img/others/second-blog-img1.jpg'%}" alt="second-blog-img1">
+            </div> 
+            
+            <div class="blog-img img2">
+                <img src="{%static 'img/others/second-blog-img2.jpg'%}" alt="second-blog-img2">
+            </div> 
+            
+            <div class="blog-img img3">
+                <img src="{%static 'img/others/second-blog-img3.jpg'%}" alt="second-blog-img3">
+            </div> 
+        </div>
+    </div>
+    
+    <div class="flexbox first-row">
+        <div class="img-box">
+            <div class="blog-img img1 myart">
+                <img src="{% static 'img/mydrawing/marvel/mandalorian.jpeg' %}" alt="third-blog-img1">
+            </div> 
+            
+            <div class="blog-img img2">
+                <img src="{%static 'img/others/third-blog-img2.jpg'%}" alt="third-blog-img2">
+            </div> 
+            
+            <div class="blog-img img3">
+                <img src="{%static 'img/others/third-blog-img3.jpg'%}" alt="third-blog-img3">
+            </div> 
+        </div>
+        
+        <div class="text-box">
+            <h3>pencil sketching</h3>
+            <p><b>Pencil sketching</b>, technique in which pigments are mixed with hot, liquid wax. After all of the colours have been applied to the painting surface, a heating element is passed over them until the individual brush or spatula marks fuse into a uniform film.</p>
+            <a href="{% url 'gallery' %}"><button class="view-gallery-btn ">view gallery
+                <span class="brush-icon"><i class="fa fa-bullhorn"></i></span>
+            </button></a>
+        </div>
+    </div>
+
+    
+</div>
+
+
+<div class="top">
+    <div class="title">
+        <h3 id="title">about me</h3>
+        <p class="small-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit Ratione </p>
+        <img class="title-line" src="{%static 'img/others/title-line.png'  %}" alt="title-line">
+    </div>        
+</div>
+
+
+
+
+
+<div class="about-me-box">
+    <div class="myphoto-box">
+        <img src="{% static 'img/others/myphoto1.png' %}" alt="myphoto">
+    </div>
+    <div class="aboutme-text-box ">
+        <div class="h3-and-p">
+            <h3>a little intro</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+        </div>
+        
+      <div class="newsletter">
+        <h3>NEWSLETTER</h3>
+        <p>Feel free to place your Mail_ID and Subscribe to our Newsletter here. So that, you can receive our exiting Updates and Offers with no wait!</p>
+        <div class="newsletter-row1">
+            <form method="POST" id="homepage-newsletter-form" >
+                {% csrf_token %}
+                <input required="" class="ipfield2" type="email" id="newsletter" name="task" placeholder="Email">
+                <button class="submitbtn" type="submit" >Subscribe</button>
+            </form>
+        </div>
+
+        <div class="newsletter-row2">
+            <div class="subsmsg">
+                <i class="  fa fa-check" ></i>
+            </div>
+            <p class="subsmsg">Thanks for Subscribing!</p>    
+
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<div class="line">
+</div>
+
+
+<footer class="footer">
+    <ul class="additional">
+        <a href="{%url 'contact'  %}"><li>Contact us</li></a>
+        <li>Privacy policy</li>
+        <li>Terms of use</li>
+        <li>FAQ</li>
+         
+    </ul>
+    <ul class="payment-icons">
+        <li><i class="fab fa-cc-amex"></i></li>
+        <li><i class="fab fa-cc-mastercard"></i></li>
+        <li><i class="fab fa-cc-visa"></i></li>
+        <li><i class="fab fa-cc-discover"></i></li>
+        <li><i class="fab fa-cc-paypal"></i></li>
+
+    </ul>
+    <!-- <p>  © 2021 <a href="">Shades of Drawing</a>. All rights reserved</p> -->
+</footer>
+
+
+</body>
+</html>

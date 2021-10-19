@@ -1,0 +1,223 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block title %}
+    Service
+{% endblock %}
+
+{%block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/service.css' %}">
+    <script src="{%static 'plugins/jquery.js' %}"></script>
+{% endblock %}
+
+{% block h3tag %}
+    What We Do
+{% endblock %}
+
+
+{%block activeservice%} activenavbar  {% endblock %}
+{% block content %}
+
+
+
+
+<section class="art-types">
+    <article class="left-text">
+        <h2>We are into art</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate officia expedita quos quaerat illum enim voluptatibus minus voluptas, vero debitis eum veritatis dicta, est quidem quisquam facere ex suscipit.
+        Nesciunt voluptate dicta enim provident nam at laudantium cumque impedit et accusamus quia, ducimus unde in adipisci delectus reprehenderit reiciendis nostrum mollitia. Voluptatibus delectus ut commodi praesentium, hic accusantium quae.
+        </p>
+        <p>
+        Suscipit reprehenderit, iure praesentium rem vitae blanditiis nesciunt nam cupiditate possimus laborum temporibus hic dignissimos eligendi! Ratione, possimus neque? Doloribus id voluptatibus, aliquam sed quod officiis mollitia inventore in ex!
+        Veniam perspiciatis dicta architecto aut voluptatum porro id quisquam minima at, rerum consequuntur. Iusto nesciunt architecto, qui delectus fuga itaque explicabo minima veniam ratione assumenda! Explicabo voluptatem alias dolorem expedita.</p>
+    </article>
+    <article class="grid-images">
+        <div class="grid-images-items">
+            <p class="image-name">Artist</p>
+            <img src="{%static 'img/others/artist.png'%}" alt="artist"><br>
+        </div>
+        <div class="grid-images-items">
+            <p class="image-name">pencil <br> sketch</p>
+            <img src="{%static 'img/others/tools-dark.png'%}" alt="tools-dark"><br>
+        </div>
+        
+        <div class="grid-images-items">
+            <p class="image-name">acrylic</p>
+            <img src="{%static 'img/others/color-pad-dark.png'%}" alt="color-pad-dark"><br>
+        </div>
+        <div class="grid-images-items">
+            <p class="image-name">oil<br>painting</p>
+            <img src="{%static 'img/others/paint-can-dark.png'%}" alt="paint-can-dark"><br>
+        </div>
+        <div class="grid-images-items">
+            <p class="image-name">aquarell</p>
+            <img src="{%static 'img/others/water-color-dark.png'%}" alt="water-color-dark"><br>
+        </div>
+        <div class="grid-images-items">
+            <p class="image-name">pen art</p>
+            <i class="fas fa-pen-nib" style="color:#474747; font-size:60px"></i>
+        </div>
+    </article>
+</section>
+    
+
+
+
+
+
+
+<section class="premium-art">
+    <div class="premium">
+        <h2>Premium art classes organized</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nemo tempore voluptatibus harum ipsum. A numquam quibusdam voluptates delectus omnis officiis, corrupti odio explicabo et ullam, minus, ipsa voluptate repellat.</p>
+        <ul>
+            <li><i class="fas fa-paperclip"></i>Basic</li>
+            <li><i class="fas fa-paperclip"></i>Advanced</li>
+            <li><i class="fas fa-paperclip"></i>Professional</li>
+        </ul>
+        <div class="pricing-btn-box">   
+            <button class="pricing-btn">know more
+                <span class="brush-icon"><i class="fas fa-paint-brush"></i></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="different-types">
+    <article class="text-box">
+        <h2>Our different types of service provided</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed laudantium ipsum aliquid earum, numquam blanditiis. Eligendi corrupti suscipit delectus facere officiis ad cupiditate libero perferendis vitae, autem animi!</p>
+        <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti possimus dicta nemo maiores! Veritatis sed libero earum, tempora ipsam obcaecati placeat deserunt. Neque perspiciatis quibusdam cumque eaque in ipsa laboriosam.
+        </p>
+    </article>
+
+
+    <article class="img-box">
+        <div class="big-img">
+            <img src="{%static 'img/others/service-box-img1.jpg'%}" alt="service-box-img1">
+        </div>
+        <div class="text-container">
+            <div class="icon-img">
+                <img src="{% static 'img/others/acrylic-art.png' %}" alt="acrylic-art">  
+            </div>
+            <div class="h2-and-p">
+                <h2>Sketching</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium voluptatum aliquid blanditiis maxime illum, laboriosam exercitationem, dolore vero qui atque. Similique ullam fuga odio pariatur natus. Vel, delectus. Reiciendis.</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="img-box">
+        <div class="big-img">
+            <img src="{%static 'img/others/service-box-img2.jpg'%}" alt="service-box-img2">
+        </div>
+        <div class="text-container">
+            <div class="icon-img">
+                <img src="{% static 'img/others/canvas-painting.png' %}" alt="canvas-painting">  
+            </div>
+            <div class="h2-and-p">
+                <h2>canvas painting</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium voluptatum aliquid blanditiis maxime illum, laboriosam exercitationem, dolore vero qui atque. Similique ullam fuga odio pariatur natus. Vel, delectus. Reiciendis.</p>
+            </div>
+        </div>
+    </article>
+    
+    <article class="img-box">
+        <div class="big-img">
+            <img src="{%static 'img/others/service-box-img3.jpg'%}" alt="service-box-img3">
+        </div>
+        <div class="text-container">
+            <div class="icon-img">
+                <img src="{% static 'img/others/abstract-art.png' %}" alt="abstract-art">  
+            </div>
+            <div class="h2-and-p">
+                <h2>abstract art</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium voluptatum aliquid blanditiis maxime illum, laboriosam exercitationem, dolore vero qui atque. Similique ullam fuga odio pariatur natus. Vel, delectus. Reiciendis.</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="img-box">
+        <div class="big-img">
+            <img src="{%static 'img/others/service-box-img4.jpg'%}" alt="service-box-img4">
+        </div>
+        <div class="text-container">
+            <div class="icon-img">
+                <img src="{% static 'img/others/oil-painting.png' %}" alt="oil-painting">  
+            </div>
+            <div class="h2-and-p">
+                <h2>oil painting</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium voluptatum aliquid blanditiis maxime illum, laboriosam exercitationem, dolore vero qui atque. Similique ullam fuga odio pariatur natus. Vel, delectus. Reiciendis.</p>
+            </div>
+        </div>
+    </article>
+    
+    <article class="img-box">
+        <div class="big-img">
+            <img src="{%static 'img/others/service-box-img5.jpg'%}" alt="service-box-img5">
+        </div>
+        <div class="text-container">
+            <div class="icon-img">
+                <img src="{% static 'img/others/spray-potrait.png' %}" alt="spray-potrait">  
+            </div>
+            <div class="h2-and-p">
+                <h2>Spray potrait</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium voluptatum aliquid blanditiis maxime illum, laboriosam exercitationem, dolore vero qui atque. Similique ullam fuga odio pariatur natus. Vel, delectus. Reiciendis.</p>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="top">
+    <div class="title">
+        <h3 id="title">OUR EXPERTIZE</h3>
+        <p class="small-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit Ratione </p>
+        <img class="title-line" src="{%static 'img/others/title-line.png'  %}" alt="title-line">
+    </div>        
+</section>
+
+
+
+
+<section class="skill">
+    
+    <div class="skill-container">
+        <div class="progress-circle progress-50"><span>50</span></div>  
+        <h2>oil painting</h2>
+    </div>
+    
+    <div class="skill-container">
+        <div class="progress-circle progress-99"><span>99</span></div>  
+        <h2>Sketch</h2>
+    </div>
+
+    <div class="skill-container">
+        <div class="progress-circle progress-45"><span>45</span></div>  
+        <h2>Acrylic art</h2>
+    </div>
+
+    <div class="skill-container">
+        <div class="progress-circle progress-70"><span>70</span></div>  
+        <h2>abstract art</h2>
+        
+    </div>
+        
+</section>
+
+
+
+
+{% endblock %}
