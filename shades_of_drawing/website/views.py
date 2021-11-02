@@ -34,8 +34,8 @@ def index(request):
 def gallery(request):
     return render(request,'gallery.html',{})
 
-def aboutus(request):
-    return render(request,'aboutus.html',{})
+def aboutme(request):
+    return render(request,'aboutme.html',{})
 
 def contact(request):
     if request.method=="POST":
