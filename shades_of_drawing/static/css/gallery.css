@@ -82,13 +82,13 @@ body{
 
 .gallery-filter-button{
     font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 1vw;
+    font-size: 1.2rem;
     background-color: #a81c51;
     color:white;
     border: none;
     outline:none;
     padding:1vw;
-    width:8vw;
+    width:8em;
     margin: 10px;
     transition: all 1s ease;
 
@@ -134,7 +134,7 @@ body{
 
 .loadbutton{
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 1vw;
+  font-size: 1.2rem;
   text-transform: uppercase;
   background-color: #a81c51;
   padding:15px 20px 15px 65px;
@@ -178,7 +178,7 @@ transition-timing-function:cubic-bezier(.32,2,.55,.27);
   position: absolute;
   z-index: 1;
   top: 0px;
-  font-size: 20px;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -215,8 +215,8 @@ transform: scaleY(1);
 
 .loadbutton:hover .gallery-icon i{
   color:white;
-}
 
+}
 .loadbutton:hover .gallery-icon::after{
   border-color: transparent transparent transparent #a81c51;
 }
@@ -236,7 +236,7 @@ transform: scaleY(1);
   position: absolute;
   z-index: 1;
   top: 0px;
-  font-size: 20px;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;

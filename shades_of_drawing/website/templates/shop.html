@@ -17,13 +17,13 @@
 {%block activeshop%} 
     activenavbar  
 {% endblock %}
-
+   
 
 {% block content %}
 
 <div class="shop-item-container grid">
 
-{% for item in shop %}    
+{% for item in gallery %}    
     <div class="shop-item">
         <div class="item-img">
             <img id="item-img" src="{{item.imageURL}}">
@@ -34,8 +34,6 @@
         </div>
         <div class="item-desc">
             <p class="item-name">{{item.name}}</p>
-            <!-- <p class="item-name">{{item.category}}</p> -->
-
             <p class="item-price">INR {{item.price|floatformat:2}}</p>
         </div>
     </div>

@@ -16,13 +16,15 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-class Shop(models.Model):
+        
+class Gallery(models.Model):
     name=models.CharField(max_length=200)
-    description=models.CharField(max_length=2000)
-    image=models.ImageField(null=True,blank=True)   
-    price=models.FloatField()
+    image=models.ImageField(null=True,blank=True)
+    price=models.FloatField(default=500.00,blank=True)
     category=models.ManyToManyField(Category)
-    
+    portfolio=models.BooleanField(default=False)
+    shop=models.BooleanField(default=False)
+
     def __str__(self):
         return self.name
 
@@ -33,9 +35,3 @@ class Shop(models.Model):
         except:
             url=""
         return url
-
-        
-# class cart(models.Model):
-    # user=
-    # gallery id= checkbox choice of gallery pk
-

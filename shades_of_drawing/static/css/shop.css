@@ -1,11 +1,12 @@
 .shop-item-container{
-margin:50px 30px;
+    margin:50px 30px;
 }
 
 
 .shop-item{
-    width:220px;
-    margin:15px;
+    min-width:200px;
+    max-width: 17%;
+    margin:25px;
     /* background-color: aqua; */
     height:fit-content;
 }
@@ -21,10 +22,6 @@ margin:50px 30px;
     max-width: 100%;
     height:auto;
     display:block;
-    /* background-color: #a81c51; */
-    /* opacity:0.3; */
-    /* z-index: 3; */
-
 }
 
 
@@ -43,7 +40,7 @@ margin:50px 30px;
 .options{
     position: absolute;
     margin:0;
-    bottom:-38px;
+    bottom:-100px;
     left:0;
     right:0;
     width:100%;
@@ -74,7 +71,7 @@ margin:50px 30px;
     display:flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .options-btn i{

@@ -45,9 +45,6 @@
 
 
 
-
-
-
 body{
       background-color: black;
       color:white;
@@ -73,7 +70,7 @@ body{
     
   #title{
       text-transform: uppercase;
-      font-size: 5vw;
+      font-size: 6rem;
       font-family: 'Josefin Sans', sans-serif;
       color:white;
       margin:0;
@@ -102,6 +99,7 @@ body{
   .footer{
       text-align: center;
       margin: 80px 0;
+      font-size: 1.2rem;
   }
 
   .footer .additional,.payment-icons{
@@ -132,7 +130,7 @@ body{
 
   .payment-icons li{
       /* margin-top:100px; */
-      font-size: 35px;
+      font-size: 2.2em;
       color:#706d6d;
       display:inline;
       width: fit-content;
@@ -355,7 +353,7 @@ body{
       z-index: 1;
       background-color: rgba(0,0,0,0.5);
       /* transition: all 0.5s ease-in-out; */
-      font-size: 26px;  
+      font-size: 2rem;  
       color:white;
       font-weight: lighter;
     }

@@ -53,78 +53,16 @@
     </div>
     
     <div class="middle grid" >
+        {% for item in gallery %}
 
-        <div class=" grid-item threed ">
-            <img class=" drawing-img initial" id="initial" src="{% static 'img/mydrawing/3D/underground building 1.jpeg' %}" alt="underground-building"> 
-        </div>
-
-        <div class="grid-item realistic potrait">            
-            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/realistic/realistic1.jpg' %}" alt="realistic"> 
-        </div> 
-                
-        <div class=" grid-item perspective threed">
-            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/perspective/bird eye perspective.jpeg' %}" alt="birds-eye-perspective"> 
-        </div> 
-
-        <div class="grid-item potrait ">   
-            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/marvel/ironman-1.jpeg' %}" alt="ironman"> 
-        </div>
-
-
-        <div class="grid-item potrait ">
-            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/marvel/doctor strange.jpg' %}" alt="doctor-strange">
-        </div>
-
-        <div class="grid-item potrait realistic">
-            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/nadal/nadal.jpg' %}" alt="nadal"> 
-        </div>
-
-        <div class="grid-item perspective">
-            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/perspective/guggehium.jpeg' %}" alt="guggenhium"> 
-        </div>      
-
-        <div class="grid-item threed  " >
-            <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/3D/underground-city1.jpeg' %}" alt="underground-city"> 
-        </div> 
-
-
-        <div class="grid-item potrait ">       
-            <img class=" drawing-img " src="{% static 'img/mydrawing/harry-potter/lord voldemort.jpeg' %}" alt="voldermort" > 
-        </div>
-
-        <div class=" grid-item potrait">
-            <img class=" drawing-img " src="{% static 'img/mydrawing/marvel/captain-america.jpeg' %}" alt="captain-america"> 
+        <div class=" grid-item 
+            {% for i in item.category.all%}
+                {{i.name}}
+            {% endfor %}
+                                ">
+            <img class=" drawing-img initial" id="initial" src="{{item.imageURL}}">
         </div>        
-
-        <div class="grid-item potrait " >
-            <img class=" drawing-img " src="{% static 'img/mydrawing/harry-potter/harry potter.jpeg' %}" alt="harry-potter">
-        </div>
-
-        <div class="grid-item potrait "> 
-            <img class=" drawing-img " src="{% static 'img/mydrawing/marvel/deadpool.jpeg' %}" alt="deadpool"> 
-        </div>
-
-        <div class="grid-item potrait">
-            <img class=" drawing-img " src="{% static 'img/mydrawing/marvel/starlord-1.jpeg' %}" alt="starlord"> 
-        </div>
-
-        <div class=" grid-item threed">    
-            <img class=" drawing-img " src="{% static 'img/mydrawing/3D/burj khalifa 1.jpeg' %}" alt="burj-khalifa">
-        </div>
-
-        <div class=" grid-item potrait">
-            <img class=" drawing-img " src="{% static 'img/mydrawing/marvel/vision.jpeg' %}" alt="vision">
-        </div>
-
-        <div class=" grid-item perspective ">
-            <img class=" drawing-img " src="{% static 'img/mydrawing/perspective/sci-fi city.jpeg' %}" alt="sci-fi-city">
-        </div>
-
-        <div class="grid-item potrait  " >
-            <img class=" drawing-img " src="{% static 'img/mydrawing/marvel/mandalorian.jpeg' %}" alt="mandalorian"> 
-        </div> 
-            
-
+        {% endfor %}
     </div>
         
         <div class="loadmore">

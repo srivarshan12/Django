@@ -1,11 +1,10 @@
 preloaderFadeOutTime = 2000;
 function hidePreloader() {
     var preloader = $('.spinner-wrapper');
-    preloader.fadeOut(preloaderFadeOutTime);
+        preloader.fadeOut(preloaderFadeOutTime);
     }
 
     window.addEventListener("load", event => {
-        // var image = document.getElementById("initial");
         var image = document.querySelectorAll(".initial");
        
         var total_images=document.getElementsByClassName("grid-item").length;
@@ -15,6 +14,7 @@ function hidePreloader() {
         var potrait=document.getElementById("potrait");
         
         var realistic_images=document.getElementsByClassName("realistic").length;
+        console.log(realistic_images);
         var realistic=document.getElementById("realistic");
     
         var perspective_images=document.getElementsByClassName("perspective").length;
@@ -23,7 +23,7 @@ function hidePreloader() {
         var threed_images=document.getElementsByClassName("threed").length;
         var threed=document.getElementById("threed");
     
-        // console.log(image);
+        console.log(image);
         var isLoaded = image[0].complete && image[1].complete &&image[2].complete && image[3].complete && image[4].complete 
         &&image[5].complete && image[6].complete && image[7].complete  &&  image.naturalHeight !== 0;
         
@@ -33,12 +33,8 @@ function hidePreloader() {
             realistic.innerHTML=realistic_images;
             perspective.innerHTML=perspective_images;
             threed.innerHTML=threed_images;
-    
             hidePreloader();
-    
         }
-    
-    
     });
     
 window.addEventListener("load", function(){
@@ -58,18 +54,6 @@ window.addEventListener("load", function(){
         console.log("hdsld"); 
         return false;
     });
-
-
-    // $('.loadbutton').click(function(){
-    //     $('.loadbutton').removeClass('active');
-    //     $(this).css("display","none");
-    
-   
-    //     var $newItems = $('<div class="item" /><div class="item" /><div class="item" />');
-    //     $('.grid').append( $newItems ).isotope( 'addItems', $newItems );
-
-    // })
-
 
 
 // init Isotope

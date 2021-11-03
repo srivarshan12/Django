@@ -8,31 +8,35 @@ import ctypes  # An included library with Python install.
 
 # Create your views here.
 def index(request):
-
+    gallery=Gallery.objects.filter(portfolio=True)        
+    context={"gallery":gallery}    
+           
     if request.method=="POST":
             email=request.POST.get('newsletteremail')
             print(email)
             if Newsletter.objects.filter(name=email).exists():
                     print(email+" already exists")  
-                    return render(request,'index.html',{})
+                    return render(request,'index.html',context)
             else:
                 try:
                     if requests.get("https://isitarealemail.com/api/email/validate", params = {'email': email}).json()['status']=="valid":
                         new = Newsletter(name=email)
                         new.save()
                         print(email+"added successfully")  
-                        return render(request,'index.html',{})
+                        return render(request,'index.html',context)
                     else:
                         print("invalid")    
                         return None
                 except ValueError:
                     print("Invalid exception")
 
-    return render(request,'index.html',{})
+    return render(request,'index.html',context)
 
 
 def gallery(request):
-    return render(request,'gallery.html',{})
+    gallery=Gallery.objects.all()
+    context={"gallery":gallery}    
+    return render(request,'gallery.html',context)
 
 def aboutme(request):
     return render(request,'aboutme.html',{})
@@ -87,8 +91,8 @@ def service(request):
     return render(request,'service.html',{})
 
 def shop(request):
-    shop=Shop.objects.all()
-    context={"shop":shop}    
+    gallery=Gallery.objects.filter(shop=True)        
+    context={"gallery":gallery}    
     return render(request,'shop.html',context)
     
 def cart(request):

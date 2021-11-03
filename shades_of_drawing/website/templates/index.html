@@ -112,25 +112,12 @@
         </div>
     </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="jumbotron">
 </div>
 
 <div class="top" id="top">
     <div class="title">
         <h3 id="title">Portfolio</h3>
-        <p class="small-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit Ratione </p>
         <img class="title-line" src="{%static 'img/others/title-line.png'  %}" alt="title-line">
     </div>        
 </div>
@@ -165,44 +152,13 @@
 
 </div>
 
-<div class="middle grid" >
+<div class="middle grid">
 
-    <div class=" grid-item perspective threed ">
-        <img class=" drawing-img initial" id="initial"src="{% static 'img/mydrawing/3D/burj khalifa 1.jpeg' %}" alt="burj-khalifa"> 
-    </div>
-
-    <div class="grid-item realistic potrait">            
-        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/realistic/realistic1.jpg' %}" alt="realistic"> 
-    </div> 
-            
-    <div class=" grid-item perspective threed">
-        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/perspective/bird eye perspective.jpeg' %}" alt="birds-eye-perspective"> 
-    </div> 
-
-    <div class="grid-item potrait ">   
-        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/marvel/ironman-1.jpeg' %}" alt="ironman"> 
-    </div>
-
-
-    <div class="grid-item potrait ">
-        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/marvel/doctor strange.jpg' %}" alt="doctor-strange">
-    </div>
-
-    <div class="grid-item potrait realistic">
-        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/nadal/nadal.jpg' %}" alt="nadal"> 
-    </div>
-
-    <!-- <div class="grid-item perspective">
-        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/perspective/guggehium.jpeg' %}" alt="guggenhium"> 
-    </div>       -->
-
-    <div class="grid-item threed  " >
-        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/3D/underground-city1.jpeg' %}" alt="underground-city"> 
-    </div> 
-    
-    <div class="grid-item potrait  " >
-        <img class=" drawing-img initial "id="initial" src="{% static 'img/mydrawing/marvel/mandalorian.jpeg' %}" alt="mandalorian"> 
-    </div> 
+    {% for item in gallery %}
+            <div class=" grid-item  {% for i in item.category.all%}  {{i.name}} {% endfor %} ">    
+                <img class=" drawing-img initial" id="initial" src="{{item.imageURL}}">                                       
+            </div>        
+    {% endfor %}
 
 </div>
 
@@ -210,7 +166,6 @@
 <div class="top">
     <div class="title">
         <h3 id="title">Blog</h3>
-        <p class="small-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit Ratione </p>
         <img class="title-line" src="{%static 'img/others/title-line.png'  %}" alt="title-line">
     </div>        
 </div>
@@ -301,7 +256,6 @@
 <div class="top">
     <div class="title">
         <h3 id="title">about me</h3>
-        <p class="small-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit Ratione </p>
         <img class="title-line" src="{%static 'img/others/title-line.png'  %}" alt="title-line">
     </div>        
 </div>

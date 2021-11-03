@@ -1,89 +1,61 @@
-ul,li{
-    list-style: none;
-    margin:0;
-    padding:0;
-}
-
-a{
-    text-decoration: none;
-}
-
 .art-types,
 .different-types,
 .skill,
-.prices{
-    margin:50px 90px;
+.premium{
+    width:1350px;
+    min-width: 50%;
+    max-width: 100%;
+    margin:0 auto;
+    font-size: 1.2rem;
 }
 
-
-
-.left-text h2,
+.art-types-description h2,
 .premium-art h2{
     font-family: "Josefin Sans", sans-serif;
     text-transform: capitalize;
     letter-spacing: 1px;
 }
 
-
 .art-types{
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    margin:5em auto;
+    max-width: 100%;
 }
 
-
-.left-text{
-    margin-right: 20px;
-}
-
-.left-text p{
+.art-types-description{
+    margin-right: 30px;
     letter-spacing: 1px;
     line-height: 1.6;
-    margin:30px 0;
     text-align: left;
+    width: 50%;
+    /* background-color: #FE6B35; */
 }
 
-
-.grid-images{
+.art-types-grid-images{
+    width:50%;
+    /* background-color: aqua; */
     display:grid;
     grid-gap:30px;
-    margin-left:20px;
     grid-template-columns: auto auto auto;
     justify-content: center; 
     align-content: center;
-    /* background-color: aqua; */
 }
 
-.grid-images-items{
+.art-types-grid-images-items{
     background-color: #191919;
-    padding:50px;
+    padding:3.5rem;
     position: relative;
     outline-color: #191919;
     outline-width:medium;
     outline-style: double;
     outline-offset: -2px;
+    overflow: hidden;
     transition: all 0.3s linear ;    
 }
 
-.grid-images-items:hover{
-    background-color: black;
-    outline-color: #191919;
-    outline-width:medium;
-    outline-style: double;
-}
-
-.grid-images-items:hover .image-name{
-    font-size: 20px;
-    opacity: 1;
-    transform: translateZ(0);
-
-}
-
-.image-name{
-    /* font-size: 20px; */
-    transform: translateZ(100);
-    font-size: 40px;
+.grid-image-items-name{
+    transform: translateZ(200);
     opacity: 0;
     text-align: center;
     text-transform: capitalize;
@@ -99,26 +71,33 @@ a{
     justify-content: center;
     align-items: center;    
     transition: all 0.3s linear ;
+    font-size: 3rem;
 }
 
+.art-types-grid-images-items:hover{
+    background-color: black;
+    outline-color: #191919;
+    outline-width:medium;
+    outline-style: double;
 
+}
 
-
-
-
-
-
-
-
-
+.art-types-grid-images-items:hover .grid-image-items-name{
+    opacity: 1;
+    font-size: 1.6rem;
+    transform: translateZ(0);
+}
 
 .premium-art{
-    padding:50px 90px;
+    padding:50px 0;
     background-image: url("/static/img/others/premium-bg2.jpg");
     background-repeat: no-repeat;
     background-position : center;
     background-size: cover;
-    background-attachment:fixed;    
+    background-attachment:fixed;
+    width: 100%;
+    font-size: 1.2rem;
+    margin:5em auto ;
 }
 
 .premium p{
@@ -127,9 +106,13 @@ a{
     padding:20px 0;
 }
 
+.premium ul{
+    padding:0;
+    margin:0;
+}
+
 .premium ul li{
     display: inline;
-    padding:20px 20px 50px 0;
 }
 
 .premium i{
@@ -137,8 +120,8 @@ a{
     color:#a81c51;
 }
 
-.premium .pricing-btn-box{
-    margin:40px 0 0 0;
+.pricing-btn-box{
+    margin:2rem 0 0.83em 0;
 }
 
 .pricing-btn{
@@ -236,11 +219,13 @@ a{
     display:grid;
     grid-gap:30px;
     grid-template-columns: 31% 31% 31% ;
+    margin:5em auto ;
+
 }
 
 .different-types h2{
     font-family: "Josefin Sans", sans-serif;
-    font-size: 30px;
+    /* font-size: 30px; */
     letter-spacing: 0.5px;
     text-transform: capitalize;
     font-weight: 300;
@@ -256,9 +241,6 @@ a{
     overflow: hidden;
 }
 
-.h2-and-p h2{
-    font-size: 27px;
-}
 
 .different-types p{
     line-height: 1.6;
@@ -270,6 +252,7 @@ a{
     overflow: hidden;
     transform: scale(1);
     height:fit-content;
+    max-width: 100%;
 }
 
 .icon-img{
@@ -279,8 +262,6 @@ a{
 .icon-img img{
     transition: transform 0.8s ease;
 }
-
-
 
 .text-container{
     background-color: #191919;
@@ -296,6 +277,7 @@ a{
 
 
 .big-img img{
+    width: 100%;
     max-width: 100%;
     z-index: -33;
     display: grid;
@@ -340,7 +322,6 @@ a{
 
 
 
-
 .skill{
     display: flex;
     justify-content:space-between;
@@ -360,8 +341,10 @@ a{
     position: relative;
     display: inline-block;
     margin: 1rem;
-    width: 175px;
-    height: 175px;
+    /* width: 216px; */
+    width:12em;
+    /* height: 216px; */
+    height:12em;
     border-radius: 50%;
 }
   
@@ -374,7 +357,7 @@ a{
 }
 
 .progress-circle span {
-    font-size: 50px;
+    font-size: 3rem;
     color: white;
     position: absolute;
     left: 50%;
@@ -382,11 +365,10 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 165px;
-    height: 165px;
-    line-height: 60px;
-    margin-left: -82.5px;
-    margin-top: -82.5px;
+    width:4.2em;
+    height:4.2em;
+    margin-left: -2.1em;
+    margin-top: -2.1em;
     text-align: center;
     border-radius: 50%;
     background: black;
