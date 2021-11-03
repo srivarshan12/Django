@@ -74,8 +74,6 @@ body{
       font-family: 'Josefin Sans', sans-serif;
       color:white;
       margin:0;
-      /* padding:100px 0 ; */
-      /* padding:100px 0; */
       text-align: center;
   }
 
@@ -88,12 +86,13 @@ body{
   .title-line{
       max-width: 100%;
       height:auto;
-  }
+      margin: 30px 0;
+    }
 
   .line{
       background-image: url("/static/img/others/title-line.png");
       padding:10px;
-      margin-bottom: 50px;
+      margin: 50px 0;
   }
 
   .footer{
@@ -403,27 +402,21 @@ body{
     font-size: 5em;
   }
 
-
   .top{
     margin:0 auto;
   }
 }
-
-
-
-    
+   
 @media only screen and (max-width: 750px)
 {
   
   #title{
     font-size: 4.5em;
   }
+
   .top{
-    margin:0 auto;
+    margin:0 auto  ;
   }
 
-  .title img{
-    display: none;
-  }
-
+ 
 }
