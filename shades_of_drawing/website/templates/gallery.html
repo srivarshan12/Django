@@ -16,62 +16,55 @@
         gallery
     {% endblock %}
 
-<!-- preloader -->
 {%block activegallery%} activenavbar  {% endblock %}
  
 {%block content%}
-    <div class="spinner-wrapper">
-        <div class="spinner"></div>
-    </div>
-            
-    <div class="filter-button">
-        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button active" data-filter="*">
+
+    <div class="filter-button-container">
+        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button active" data-filter="*">
             <span class="tooltiptext" id="allitems"></span>
             ALL
         </button>
     
-        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".potrait">
+        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button" data-filter=".potrait">
             <span class="tooltiptext" id="potrait"></span>
             POTRAITS
         </button>
     
-        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".realistic">
+        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button" data-filter=".realistic">
             <span class="tooltiptext" id="realistic"></span>
             REALISTIC
         </button>
     
-        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".perspective">
+        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button" data-filter=".perspective">
             <span class="tooltiptext" id="perspective"></span>
             PERSPECTIVE
         </button>
     
-        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button button" data-filter=".threed">
+        <button class="hvr-shutter-out-horizontal tooltip gallery-filter-button" data-filter=".threed">
             <span class="tooltiptext" id="threed"></span>
             3D
         </button>
-    
     </div>
-    
-    <div class="middle grid" >
-        {% for item in gallery %}
-
-        <div class=" grid-item 
-            {% for i in item.category.all%}
-                {{i.name}}
+    <div class="grid-background">
+        <div class="grid" >
+            {% for item in gallery %}
+                <div class=" grid-item  {% for i in item.category.all%}  {{i.name}}   {% endfor %}  ">
+                    <img class=" drawing-img initial" id="initial" src="{{item.imageURL}}">
+                </div>        
             {% endfor %}
-                                ">
-            <img class=" drawing-img initial" id="initial" src="{{item.imageURL}}">
-        </div>        
-        {% endfor %}
+        </div>    
     </div>
-        
-        <div class="loadmore">
-            
-            <button class="loadbutton  ">Load more                <span class="gallery-icon"><i class="far fa-image"></i></span>
-            </button>
+    <div class="loadmore">
+        <button class="loadbutton  ">
+            Load more
+            <span class="gallery-icon">
+                <i class="far fa-image"></i>
+            </span>
+        </button>
 
-        </div>
-        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-        <script src="{%static 'js/gallery.js' %}"></script>
+    </div>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="{%static 'js/gallery.js' %}"></script>
         
 {% endblock %}

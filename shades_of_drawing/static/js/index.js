@@ -78,6 +78,7 @@ window.addEventListener("load", function(){
         itemSelector: '.grid-item',
         layoutMode: 'masonry',
         transitionDuration:1500,  
+        
     });
 
 

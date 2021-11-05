@@ -40,14 +40,14 @@ function hidePreloader() {
 window.addEventListener("load", function(){
 
     
-    $('.button').click(function(){
-        $('.button').removeClass('active');
+    $('.gallery-filter-button').click(function(){
+        $('.gallery-filter-button').removeClass('active');
         $(this).addClass('active');
 
         var selector=$(this).attr('data-filter');
         console.log(selector)
 
-        $('.middle').isotope({
+        $('.grid').isotope({
             filter:selector  
         });
         
@@ -59,12 +59,18 @@ window.addEventListener("load", function(){
 // init Isotope
 var initial_items = 8;
 var next_items = 4; 
+
+
 var $grid = $('.grid').isotope({
     itemSelector: '.grid-item',
-    layoutMode: 'masonry',
-    transitionDuration:1500,  
-    // stamp: '.grid-item--static'
+    masonry: {
+      columnWidth: 50,
+      gutter: 10,
+        transitionDuration:1500,
+        fitWidth:true  
+    }
 });
+
  
 
 function showNextItems(pagination) {

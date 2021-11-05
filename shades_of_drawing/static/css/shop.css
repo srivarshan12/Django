@@ -1,10 +1,10 @@
-.container {
-  margin: 0 30px;
+.grid {
+  margin: 0 auto;
 }
 
 .container-item {
-  width: 18rem;
-  margin: 25px;
+  width: 19rem;
+  margin-bottom: 50px;
 }
 .container-item:hover .item-options {
   bottom: 0;
