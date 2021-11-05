@@ -78,7 +78,7 @@ body{
     justify-content: center;
     padding-bottom: 50px;
 }
-
+ 
 
 .gallery-filter-button{
     font-family: 'PT Sans Narrow', sans-serif;
@@ -342,7 +342,7 @@ transform: scaleY(1);
 }
 
 .grid-item{
-    width:14vw;
+    width:16rem;
     border:1vw solid #333;
     border-style:outset;
     padding-top:2vw;

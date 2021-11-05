@@ -38,19 +38,9 @@
         </div>
     </div>
 {% endfor %}
-
-
     
 </div>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script>
-    
-    var $grid = $('.grid').isotope({
-        itemSelector: '.shop-item',
-        layoutMode: 'masonry',
-        transitionDuration:1500,  
-        // stamp: '.grid-item--static'
-    });
-</script>
 
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="{% static 'js/shop.js' %}"></script>
 {% endblock %}  
