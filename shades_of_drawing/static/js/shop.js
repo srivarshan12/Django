@@ -1,6 +1,5 @@
 var $grid = $('.grid').isotope({
-    itemSelector: '.shop-item',
+    itemSelector: '.container-item',
     layoutMode: 'masonry',
     transitionDuration:1500,  
-    // stamp: '.grid-item--static'
 });

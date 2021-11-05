@@ -1,0 +1,125 @@
+.container{
+    margin:0 30px;
+}
+
+
+.container-item{
+    width:18rem;
+    margin:25px;
+    &:hover .item-options{
+        bottom:0;
+    }
+
+}
+
+.item-img{
+    overflow: hidden;
+    position: relative;
+    img{
+        max-width: 100%;
+        height:auto;
+        display:block;
+    }
+    &:after{
+        position: absolute;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        background: #a81c51;
+        opacity:0.4;
+        z-index: 3;
+    }
+}
+ 
+
+.item-options{
+    position: absolute;
+    margin:0;
+    bottom:-5em;
+    left:0;
+    right:0;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    transition: bottom 0.3s cubic-bezier(.32,2,.55,.27);
+}
+
+
+.options-btn{
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+    text-transform:uppercase;
+    background-color:#cc2366;
+    letter-spacing: 1px;
+    width:49.76%;
+    margin:0;
+    padding:10px;
+    border:0;
+    outline:0;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    i{
+        padding-right:5px;
+    }
+}
+
+
+
+.item-desc{
+    text-align: center;
+    text-transform:uppercase;
+    letter-spacing: 1px;
+}
+
+.item-name{
+    font-size: 2.5rem;
+}
+
+.item-price{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+
+.hvr-shutter-out-horizontal {
+    transform: translateZ(0);
+    position: relative;
+    transition: color 0.4s;
+  
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        transform: scaleX(0);
+        transform-origin: 50%;
+        transition-property: transform;
+        transition-duration: 0.4s;
+        transition-timing-function:cubic-bezier(.32,2,.55,.27);
+    }
+
+    &:hover{
+        color: #a81c51;
+        cursor: pointer;
+
+        &:before{
+            transform: scaleX(1);
+        }
+    }
+}
+  
+.active{
+    background-color: white;
+    color:#a81c51
+}
+ 

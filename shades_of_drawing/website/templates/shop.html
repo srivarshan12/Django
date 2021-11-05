@@ -1,46 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-    Shop 
-{% endblock %}
+{% block title %}   Shop  {% endblock %}
 
 {%block stylesheet %}
     <link rel="stylesheet" href="{% static 'css/shop.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 {% endblock %}
 
-{%block h3tag %}
-    shop
-{%endblock%}
+{%block h3tag %}    shop    {%endblock%}
 
-{%block activeshop%} 
-    activenavbar  
-{% endblock %}
+{%block activeshop%}    activenavbar    {% endblock %}
    
 
 {% block content %}
-
-<div class="shop-item-container grid">
-
-{% for item in gallery %}    
-    <div class="shop-item">
-        <div class="item-img">
-            <img id="item-img" src="{{item.imageURL}}">
-            <div class="options">
-                <button class="options-btn hvr-shutter-out-horizontal"><i class="fas fa-shopping-cart"></i>Add to cart</button>
-                <button class="options-btn hvr-shutter-out-horizontal"><i class="far fa-images"></i>View</button>
+    <div class="container grid">
+        {% for item in gallery %}    
+            <div class="container-item">
+                <div class="item-img">
+                    <img src="{{item.imageURL}}">
+                    <div class="item-options">
+                        <button class="options-btn hvr-shutter-out-horizontal"><i class="fas fa-shopping-cart"></i>Add to cart</button>
+                        <button class="options-btn hvr-shutter-out-horizontal"><i class="far fa-images"></i>View</button>
+                    </div>
+                </div>
+                <div class="item-desc">
+                    <p class="item-name">{{item.name}}</p>
+                    <p class="item-price">INR {{item.price|floatformat:2}}</p>
+                </div>
             </div>
-        </div>
-        <div class="item-desc">
-            <p class="item-name">{{item.name}}</p>
-            <p class="item-price">INR {{item.price|floatformat:2}}</p>
-        </div>
+        {% endfor %}
     </div>
-{% endfor %}
-    
-</div>
 
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script src="{% static 'js/shop.js' %}"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="{% static 'js/shop.js' %}"></script>
 {% endblock %}  
