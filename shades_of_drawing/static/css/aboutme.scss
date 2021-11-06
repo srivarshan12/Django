@@ -1,0 +1,276 @@
+.aboutme-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    padding:50px;
+    margin:100px 50px 0px 50px;
+    // background-color: aqua;
+}
+ 
+.my-img{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    margin:0 50px 0 0;
+    width:50em; 
+    // background-color: azure;
+    img{
+        max-width: 100%;
+    }
+}
+
+.my-personal-details{
+    display: flex;
+    flex-direction: column;
+    // background-color: brown;
+}
+
+.my-general-details,
+.my-contact-details{
+    width:50%;
+    // background-color:#706d6d;
+    border: 1px solid #2b2b2b;
+    padding:20px;
+
+    display:inline-block;
+} 
+
+.hvr-rectangle-out {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    position: relative;
+    background-color:#2b2b2b;
+    transition-property: color;
+    transition-duration: 0.5s;
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;  
+        background-color:black;
+        transform: scale(0);
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+    }
+}
+  
+
+.useragent,
+.whatsapp{
+    width:50%;
+    padding:20px;
+    font-size: 15em;
+    color:#2b2b2b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    transition: all 0.3s ease-in;
+}
+
+.my-general-details-and-useragent,
+.my-contact-details-and-whatsapp{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    h3{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+
+    &:hover{
+        .hvr-rectangle-out,
+        .hvr-rectangle-out:before
+        {
+            transform: scale(1);    
+            color: white;
+        }
+
+    }
+}
+
+
+.my-general-details-and-useragent{
+    &:hover 
+    {
+        .useragent{
+            transform:scale(0.8);
+            color:#706d6d;
+        }
+        .grey-color
+        {   
+            color: white;
+
+        }
+    }
+}
+
+
+.my-contact-details-and-whatsapp
+{
+    margin-top: 30px;
+    &:hover 
+    {
+        .whatsapp
+        {
+            transform:scale(0.8);
+            color:#706d6d;
+        }
+        .grey-color,
+        .widthsmall
+        {
+            color:white;
+            a{
+                color:white;
+            }
+        }
+    }
+}
+
+
+
+.aboutme-para{
+    display: flex;
+    margin:0;
+    padding:0;
+}
+
+    .white-color
+    {
+        display: inline;
+        color:white;
+        margin-top:10px;
+        width:80px;
+    }
+
+    .grey-color
+    {
+        color:#968f8f;
+        display: inline;
+        margin-top:10px;
+        transition: color 0.3s ease-in;
+    }
+
+
+.abtme-desc{
+    line-height: 30px;
+    text-align: justify;
+}
+
+.getintouch-para{
+    display: flex;
+    margin:0;
+    padding:0;
+    align-items: center;
+
+    .widthsmall
+    {
+        width:30px;
+        color:#968f8f;
+        transition: color 0.3s ease-in;
+    }
+}
+
+.my-contact-details
+{
+    .grey-color 
+    {
+        color:#968f8f;
+        margin-top:10px;
+
+        display: inline;
+        transition: color 0.3s ease-in;
+    }
+
+    a{
+        text-decoration: none;
+        color:#968f8f;
+        transition: color 0.3s ease-in;
+    }
+    
+}
+
+.socialmedia-icons{
+    list-style: none;
+    padding:0;
+    margin: 0;
+    a{
+        color:white;
+    }
+    li{
+        display:flex;
+        float: left;
+        align-items: center;
+        justify-content: center;
+        height:50px;
+        width: 50px;
+        position: relative;
+        transform: translateZ(0);
+        transition: color 0.4s;
+        
+        &:before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: white;
+            transform: scaleY(0);
+            transform-origin: 50%; 
+            transition: transform 0.4s cubic-bezier(.32,2,.55,.27);
+        } 
+        &:hover{
+            cursor: pointer;
+            &:before{
+                transform: scaleY(1);
+            }
+        }   
+    }
+}
+
+
+
+.facebook {
+    background-color: #3B5998;
+    margin-left:5px;
+    &:hover{
+        color:#3B5998;
+    }
+}
+
+.instagram{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    margin-left:5px;
+    &:hover{
+        color:#cc2366; 
+    }
+}
+
+.twitter{
+    background-color: #55ACEE;
+    &:hover{
+        color:#55ACEE;
+    }
+}
+
+.google-plus{
+    background-color: #DD4B39;
+    margin-left:5px;
+    &:hover{
+       color:#DD4B39;
+    }
+}
