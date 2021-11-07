@@ -1,41 +1,91 @@
 .aboutme-container{
-    display:flex;
+    width:95em;
+    margin:0 auto;
+    display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: auto auto;
-    padding:50px;
-    margin:100px 50px 0px 50px;
-    // background-color: aqua;
-}
- 
-.my-img{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-
-    margin:0 50px 0 0;
-    width:50em; 
-    // background-color: azure;
-    img{
-        max-width: 100%;
-    }
+    grid-template-columns:50% 50%;
+    letter-spacing: 0.5px;
 }
 
-.my-personal-details{
-    display: flex;
-    flex-direction: column;
-    // background-color: brown;
+.my-img img{
+    max-width: 100%;
 }
 
 .my-general-details,
 .my-contact-details{
+    box-sizing: border-box;
+    font-size: 1.35rem;
     width:50%;
-    // background-color:#706d6d;
+    padding:0em 1.3em 1.3em 1.3em;
     border: 1px solid #2b2b2b;
-    padding:20px;
-
-    display:inline-block;
 } 
+
+.useragent,
+.whatsapp{
+    box-sizing: border-box;
+    width: 50%;
+    font-size: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#2b2b2b;
+    transform: scale(1);
+    transition: all 0.3s ease-in;
+}
+
+.my-general-details-and-useragent,
+.my-contact-details-and-whatsapp{
+    display: flex;
+    h3{
+        font-weight: 300;
+        font:1.5rem Arial, Helvetica, sans-serif;        
+    }
+    &:hover{
+        .hvr-rectangle-out,
+        .hvr-rectangle-out:before
+        {
+            transform: scale(1);    
+            color: white;
+        }
+    }
+}
+
+
+.my-general-details-and-useragent{
+    &:hover 
+    {
+        .useragent{
+            transform:scale(0.8);
+            color:#706d6d;
+        }
+        .grey-color
+        {   
+            color: white;
+        }
+    }
+}
+
+.my-contact-details-and-whatsapp
+{
+    margin-top: 30px;   
+    &:hover 
+    {
+        .whatsapp
+        {
+            transform:scale(0.8);
+            color:#706d6d;
+        }
+        .grey-color,
+        .widthsmall
+        {
+            color:white;
+            a{
+                color:white;
+            }
+        }
+    }
+}
 
 .hvr-rectangle-out {
     display: inline-block;
@@ -60,125 +110,42 @@
         transition-timing-function: ease-in;
     }
 }
-  
 
-.useragent,
-.whatsapp{
-    width:50%;
-    padding:20px;
-    font-size: 15em;
-    color:#2b2b2b;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    transform: scale(1);
-    transition: all 0.3s ease-in;
-}
-
-.my-general-details-and-useragent,
-.my-contact-details-and-whatsapp{
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    h3{
-        font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 30px;
-        font-weight: 300;
-    }
-
-    &:hover{
-        .hvr-rectangle-out,
-        .hvr-rectangle-out:before
-        {
-            transform: scale(1);    
-            color: white;
-        }
-
-    }
-}
-
-
-.my-general-details-and-useragent{
-    &:hover 
-    {
-        .useragent{
-            transform:scale(0.8);
-            color:#706d6d;
-        }
-        .grey-color
-        {   
-            color: white;
-
-        }
-    }
-}
-
-
-.my-contact-details-and-whatsapp
-{
-    margin-top: 30px;
-    &:hover 
-    {
-        .whatsapp
-        {
-            transform:scale(0.8);
-            color:#706d6d;
-        }
-        .grey-color,
-        .widthsmall
-        {
-            color:white;
-            a{
-                color:white;
-            }
-        }
-    }
-}
-
-
-
-.aboutme-para{
+.aboutme-paragraph{
     display: flex;
     margin:0;
     padding:0;
 }
 
-    .white-color
-    {
-        display: inline;
-        color:white;
-        margin-top:10px;
-        width:80px;
-    }
+.white-color
+{
+    display: inline;
+    color:white;
+    margin-top:10px;
+    width:80px;
+}
 
-    .grey-color
-    {
-        color:#968f8f;
-        display: inline;
-        margin-top:10px;
-        transition: color 0.3s ease-in;
-    }
+.grey-color
+{
+    color:#968f8f;
+    display: inline;
+    margin-top:10px;
+}
 
 
-.abtme-desc{
+.small-desc-aboutme{
     line-height: 30px;
     text-align: justify;
 }
 
-.getintouch-para{
+.getintouch-paragraph{
     display: flex;
     margin:0;
     padding:0;
     align-items: center;
-
-    .widthsmall
-    {
+    i{
         width:30px;
-        color:#968f8f;
+        color:white;
         transition: color 0.3s ease-in;
     }
 }
@@ -189,7 +156,6 @@
     {
         color:#968f8f;
         margin-top:10px;
-
         display: inline;
         transition: color 0.3s ease-in;
     }
@@ -214,8 +180,8 @@
         float: left;
         align-items: center;
         justify-content: center;
-        height:50px;
-        width: 50px;
+        height:3.5rem;
+        width: 3.5rem;
         position: relative;
         transform: translateZ(0);
         transition: color 0.4s;
@@ -272,5 +238,84 @@
     margin-left:5px;
     &:hover{
        color:#DD4B39;
+    }
+}
+
+@media only screen and (min-width:1301px)and ( max-width:1540px)
+{
+    .aboutme-container{
+        width: 80em;
+    }
+    .useragent,
+    .whatsapp{
+        padding:30px;
+    }
+    .my-general-details,
+    .my-contact-details{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width:1101px)and ( max-width:1300px)
+{
+    .aboutme-container{
+        width: 69em;
+    }
+    .my-general-details,
+    .my-contact-details{
+        font-size: 1.1rem;
+    }
+
+    .socialmedia-icons{
+        li{
+            height:2.8em;
+            width: 2.8em;
+        }
+    }
+}
+
+@media only screen and (max-width:1100px)
+{
+    .aboutme-container{
+        margin: 0 auto;
+        display: block;
+    }
+    .my-img{
+        margin: 0 auto 30px auto;
+    }
+    .my-general-details,
+    .my-contact-details{
+        padding:0em 1.3em 1.3em 1.3em;
+        border: 1px solid #2b2b2b;
+    } 
+}
+
+@media only screen and (min-width:801px) and ( max-width:1100px)
+{
+    .aboutme-container{
+        width: 50em;
+    }
+    .my-img{
+        width: 40em;
+    }
+}
+
+@media only screen and ( max-width:800px)
+ {
+    .aboutme-container{
+        width: 95%;
+    }
+    .my-img{
+        width: 23em;
+    }    
+    .my-general-details,
+    .my-contact-details{
+        font-size: 1.1rem;
+        width:23em;
+        margin:0 auto;
+    } 
+    .useragent,
+    .whatsapp{
+        display:none;
     }
 }
