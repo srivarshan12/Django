@@ -141,3 +141,4 @@ EMAIL_PORT='587'
 EMAIL_HOST_USER='srivarshan1206@gmail.com'
 EMAIL_HOST_PASSWORD='sri12santhosh'
 EMAIL_USE_TLS=True
+# STATIC_ROOT = os.path.join(BASE_DIR,'static')
