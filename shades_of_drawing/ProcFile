@@ -1,3 +1,0 @@
-web: gunicorn shades_of_drawing.wsgi
-
-
