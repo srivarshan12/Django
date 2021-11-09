@@ -64,7 +64,7 @@ window.addEventListener("load", function(){
         var selector=$(this).attr('data-filter');
         console.log(selector)
         
-        $('.middle').isotope({
+        $('.grid').isotope({
             filter:selector  
         });
 
@@ -76,9 +76,12 @@ window.addEventListener("load", function(){
 
     var $grid = $('.grid').isotope({
         itemSelector: '.grid-item',
-        layoutMode: 'masonry',
-        transitionDuration:1500,  
-        
+        masonry: {
+            columnWidth: 50,
+            gutter: 10,
+              transitionDuration:1500,
+              fitWidth:true  
+          }
     });
 
 
