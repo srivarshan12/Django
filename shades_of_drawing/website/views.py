@@ -49,8 +49,6 @@ def contact(request):
             senderemail=request.POST['email']
             sendersubject=request.POST['subject']
             sendermessage=request.POST['message']
-            # response = requests.get("https://isitarealemail.com/api/email/validate", params = {'email': senderemail})
-            # status = response.json()['status']
             if requests.get("https://isitarealemail.com/api/email/validate", params = {'email': senderemail}).json()['status']=="valid":
                 print("valid email")
                 send_mail(
